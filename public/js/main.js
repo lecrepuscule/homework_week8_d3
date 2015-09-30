@@ -15,6 +15,8 @@ $(document).ready(function(){
 
   socket.on("chats", function(message){
     console.log(message);
+    var text = "<p class='text-messages'>" + message + "</p>";
+    $("#messages").prepend(text);
   })
   
 
