@@ -23,5 +23,11 @@ server.listen(port, function(){
 
 io.on("connect", function(socket){
   console.log("server side connected");
+  socket.on("chats", function(message){
+    console.log("received message: %s", message)
+    io.emit("chats", message);
+  })
+  socket.emit("chats", "this is from socket");
+  io.emit("chats", "this is from io");
 })
 
