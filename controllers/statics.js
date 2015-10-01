@@ -1,5 +1,5 @@
 function home(req, res) {  
-  res.render('index.ejs');
+  res.render('chat.ejs');
 }
 
 module.exports = {
